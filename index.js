@@ -220,7 +220,7 @@ class Vote {
 }
 
 $ (function() {
-  $('#votebustercontainer').css({background: 'url(/old-media/gamesbackground2.png)', backgroundSize: '100vw 100vh'});
+  $('#votebustercontainer').css({background: 'url(./gamesbackground2.png)', backgroundSize: '100vw 100vh'});
 
   canvasWidth = $('#canvas').width();
   canvasHeight = $('#canvas').height();
