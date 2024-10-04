@@ -259,7 +259,7 @@ $ (function() {
   preloadMedia();
 });
 
-export function togglePause() {
+function togglePause() {
   if (!gamepaused) {
     if (soundenabled) {
       tracks[trackindex].pause();
@@ -533,7 +533,7 @@ function hideLoadScreen() {
   });
 }
 
-export function toggleSound() {
+function toggleSound() {
   if (!tracks[tracksenum.I].paused) tracks[tracksenum.I].pause();
 
   var soundstatus = (soundenabled) ? 'disabled' : 'enabled';
@@ -543,7 +543,7 @@ export function toggleSound() {
   if (soundenabled) fx[fxenum.corkpop].play();
 }
 
-export function startGame() {
+function startGame() {
   if (!tracks[tracksenum.I].paused) {
     tracks[tracksenum.I].pause();
     tracks[tracksenum.I].currentTime = 0;
@@ -557,7 +557,7 @@ export function startGame() {
   $('#contbtn').css({opacity: 1, visibility: 'visible'});
 }
 
-export function showInst() {
+function showInst() {
   if (!tracks[tracksenum.I].paused) {
     tracks[tracksenum.I].pause();
     tracks[tracksenum.I].currentTime = 0;
@@ -570,7 +570,7 @@ export function showInst() {
   $('#backbtn').css({opacity: 1, visibility: 'visible'});
 }
 
-export function showAb() {
+function showAb() {
   if (!tracks[tracksenum.I].paused) {
     tracks[tracksenum.I].pause();
     tracks[tracksenum.I].currentTime = 0;
@@ -583,7 +583,7 @@ export function showAb() {
   $('#backbtn').css({opacity: 1, visibility: 'visible'});
 }
 
-export function back() {
+function back() {
   if (soundenabled) fx[fxenum.corkpop].play();
 
   $('#backbtn').css({opacity: 0, visibility: 'hidden'});
@@ -637,7 +637,7 @@ export function back() {
   }
 }
 
-export function cont() {
+function cont() {
   if (soundenabled) fx[fxenum.corkpop].play();
 
   if (gamestatus == 'sel') {
@@ -833,7 +833,7 @@ function showResults() {
   }, 1000);
 }
 
-export function highlight(cand) {
+function highlight(cand) {
   var other = (cand == 'o') ? 'r' : 'o';
   var message = (cand == 'o') ? 'President Barack Obama, Democrat (Blue)' : 'Governor Mitt Romney, Republican (Red)';
   candidate = (cand == 'o') ? 'obama' : 'romney';
@@ -907,7 +907,7 @@ function setNextLevel() {
   $('#2vspe').html(multipliermsg);
 }
 
-export function setLevelVotes() {
+function setLevelVotes() {
   if (soundenabled) {
     fx[fxenum.nextlevel].pause();
     fx[fxenum.nextlevel].currentTime = 0;
